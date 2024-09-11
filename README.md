@@ -4,6 +4,8 @@ DOME 4.0 interface to OpenModel
 
 Installation
 ------------
+It is recommended that you install Python 3.11.
+
 Create a virtual Python environment (for more info, see [venv documentation](https://docs.python.org/3/library/venv.html)).
 
 In short, create the environment with
@@ -22,3 +24,16 @@ Activate the environment with one of the following commands, depending on your s
 Install requirements
 
     pip install -r requirements.txt
+
+
+
+Test querying the data
+----------------------
+In the repo contains a knowledge base serialised to the turtle file
+`kb.ttl`, which describes some datasets used in the OpenModel success
+story 3 on aluminium-reinforced concrete.
+
+The script `queries.py` is a Python script that access the knowledge
+base and perform some SPARQL queries.  Run it with:
+
+    python queries.py
