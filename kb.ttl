@@ -1,0 +1,656 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix emmo: <https://w3id.org/emmo#> .
+@prefix oteio: <https://w3id.org/emmo/domain/oteio#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ss3: <http://open-model.eu/ontologies/ss3#> .
+@prefix ss3kb: <http://open-model.eu/ontologies/ss3kb#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ss3kb:abaqus_config1 a ss3:AbaqusConfiguration,
+        <http://www.sintef.no/calm/0.1/AbaqusConfiguration>,
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    dcat:distribution ss3kb:abaqus_config1_dataresource1 ;
+    oteio:hasBeginFilter ss3kb:abaqus_config1_dataresource1 .
+
+ss3kb:abaqus_materialcard_al1 a ss3:AluminiumMaterialCard,
+        <http://www.sintef.no/calm/0.1/AluminiumMaterialCard>,
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    dcat:distribution ss3kb:abaqus_materialcard_al1_dataresource1 ;
+    oteio:hasBeginFilter ss3kb:abaqus_materialcard_al1_dataresource1 .
+
+ss3kb:abaqus_materialcard_concrete1 a ss3:ConcreteMaterialCard,
+        <http://www.sintef.no/calm/0.1/ConcreteMaterialCard>,
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    dcat:distribution ss3kb:abaqus_materialcard_concrete1_dataresource1 ;
+    oteio:hasBeginFilter ss3kb:abaqus_materialcard_concrete1_dataresource1 .
+
+ss3kb:alloy_composition1 a <http://onto-ns.com/meta/calm/0.1/AlloyComposition>,
+        ss3:EffectiveAlloyComposition,
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    dcat:distribution ss3kb:alloy_composition1_dataresource1 ;
+    oteio:hasBeginFilter ss3kb:alloy_composition1_dataresource1 .
+
+ss3kb:alloy_heat_treatment1 a <http://onto-ns.com/meta/calm/0.1/HeatTreatment>,
+        ss3:HeatTreatment,
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    dcat:distribution ss3kb:alloy_heat_treatment1_dataresource1 ;
+    oteio:hasBeginFilter ss3kb:alloy_heat_treatment1_dataresource1 .
+
+ss3kb:tabulated_elastoplastic1 a ss3:TabulatedElastoPlastic,
+        <http://www.sintef.no/calm/0.1/TabulatedElastoPlastic>,
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    dcat:distribution ss3kb:tabulated_elastoplastic1_dataresource1 ;
+    oteio:hasBeginFilter ss3kb:tabulated_elastoplastic1_dataresource1 .
+
+ss3kb:yieldstrength1 a <http://onto-ns.com/meta/calm/0.1/YieldStress>,
+        ss3:YieldStrength,
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    dcat:distribution ss3kb:yieldstrength1_dataresource1 ;
+    oteio:hasBeginFilter ss3kb:yieldstrength1_dataresource1 .
+
+<http://onto-ns.com/meta/calm/0.1/AlloyComposition> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass <http://onto-ns.com/meta/calm/0.1/AlloyComposition#composition> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://onto-ns.com/meta/calm/0.1/AlloyComposition#elements> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://onto-ns.com/meta/calm/0.1/AlloyComposition#label> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://onto-ns.com/meta/calm/0.1/AlloyComposition#ref> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    skos:prefLabel "AlloyComposition"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Alloy composition."@en ;
+    oteio:hasURI "http://onto-ns.com/meta/calm/0.1/AlloyComposition"^^xsd:anyURI .
+
+<http://onto-ns.com/meta/calm/0.1/AlloyComposition#composition> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://onto-ns.com/meta/calm/0.1/AlloyComposition#composition_dimension0> ;
+            owl:onProperty emmo:EMMO_9ae258e3_f79b_4ff3_a777_9c188b3c019c ],
+        [ a owl:Restriction ;
+            owl:onClass emmo:AtomFraction ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_e5a34647_a955_40bc_8d81_9b784f0ac527 ;
+            owl:someValuesFrom emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ],
+        emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a ;
+    skos:prefLabel "Composition"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Nominal composition. Should sum to one."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://onto-ns.com/meta/calm/0.1/AlloyComposition#composition_dimension0> a emmo:EMMO_b4c97fa0_d82c_406a_bda7_597d6e190654 ;
+    skos:prefLabel "composition_dimension0"@en ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "nelements"^^xsd:string ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of different chemical elements."@en .
+
+<http://onto-ns.com/meta/calm/0.1/AlloyComposition#elements> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://onto-ns.com/meta/calm/0.1/AlloyComposition#elements_dimension0> ;
+            owl:onProperty emmo:EMMO_9ae258e3_f79b_4ff3_a777_9c188b3c019c ],
+        [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_e5a34647_a955_40bc_8d81_9b784f0ac527 ;
+            owl:someValuesFrom emmo:EMMO_5f334606_f67d_4f0e_acb9_eeb21cb10c66 ],
+        emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a ;
+    skos:prefLabel "Elements"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Chemical symbol of each chemical element. By convension the dependent element (e.g. Al) is listed first."@en .
+
+<http://onto-ns.com/meta/calm/0.1/AlloyComposition#elements_dimension0> a emmo:EMMO_b4c97fa0_d82c_406a_bda7_597d6e190654 ;
+    skos:prefLabel "elements_dimension0"@en ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "nelements"^^xsd:string ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of different chemical elements."@en .
+
+<http://onto-ns.com/meta/calm/0.1/AlloyComposition#label> a owl:Class ;
+    rdfs:subClassOf emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_5f334606_f67d_4f0e_acb9_eeb21cb10c66 ;
+    skos:prefLabel "Label"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The label used in `alloy_ref` referring to this alloy composition. Examples: AA6082, alloy1, ..."@en .
+
+<http://onto-ns.com/meta/calm/0.1/AlloyComposition#ref> a owl:Class ;
+    rdfs:subClassOf emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_5f334606_f67d_4f0e_acb9_eeb21cb10c66 ;
+    skos:prefLabel "Ref"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Reference to a resource describing the alloy."@en .
+
+<http://onto-ns.com/meta/calm/0.1/HeatTreatment> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass <http://onto-ns.com/meta/calm/0.1/HeatTreatment#ht_label> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://onto-ns.com/meta/calm/0.1/HeatTreatment#ht_ref> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://onto-ns.com/meta/calm/0.1/HeatTreatment#step_label> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://onto-ns.com/meta/calm/0.1/HeatTreatment#temperature> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://onto-ns.com/meta/calm/0.1/HeatTreatment#time> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    skos:prefLabel "HeatTreatment"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Heat treatment table."@en ;
+    oteio:hasURI "http://onto-ns.com/meta/calm/0.1/HeatTreatment"^^xsd:anyURI .
+
+<http://onto-ns.com/meta/calm/0.1/HeatTreatment#ht_label> a owl:Class ;
+    rdfs:subClassOf emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_5f334606_f67d_4f0e_acb9_eeb21cb10c66 ;
+    skos:prefLabel "Ht_label"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Label used in `ht_ref` to refer to this heat treatment. May be unset."@en .
+
+<http://onto-ns.com/meta/calm/0.1/HeatTreatment#ht_ref> a owl:Class ;
+    rdfs:subClassOf emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_5f334606_f67d_4f0e_acb9_eeb21cb10c66 ;
+    skos:prefLabel "Ht_ref"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Reference to a resource describing the heat treatment. May be unset."@en .
+
+<http://onto-ns.com/meta/calm/0.1/HeatTreatment#step_label> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://onto-ns.com/meta/calm/0.1/HeatTreatment#step_label_dimension0> ;
+            owl:onProperty emmo:EMMO_9ae258e3_f79b_4ff3_a777_9c188b3c019c ],
+        [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_e5a34647_a955_40bc_8d81_9b784f0ac527 ;
+            owl:someValuesFrom emmo:EMMO_5f334606_f67d_4f0e_acb9_eeb21cb10c66 ],
+        emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a ;
+    skos:prefLabel "Step_label"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Descriptive label of heat treatment step. Can be empty. Note that the length is `ntimes-1` since a heat treatment step is the interval between two points in the profile."@en .
+
+<http://onto-ns.com/meta/calm/0.1/HeatTreatment#step_label_dimension0> a emmo:EMMO_b4c97fa0_d82c_406a_bda7_597d6e190654 ;
+    skos:prefLabel "step_label_dimension0"@en ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "ntimes"^^xsd:string ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of points describing the heat treatment profile."@en .
+
+<http://onto-ns.com/meta/calm/0.1/HeatTreatment#temperature> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://onto-ns.com/meta/calm/0.1/HeatTreatment#temperature_dimension0> ;
+            owl:onProperty emmo:EMMO_9ae258e3_f79b_4ff3_a777_9c188b3c019c ],
+        [ a owl:Restriction ;
+            owl:onClass emmo:DegreeCelsius ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_e5a34647_a955_40bc_8d81_9b784f0ac527 ;
+            owl:someValuesFrom emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ],
+        emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a ;
+    skos:prefLabel "Temperature"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Array of temperatures in the heat treatment profiles."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://onto-ns.com/meta/calm/0.1/HeatTreatment#temperature_dimension0> a emmo:EMMO_b4c97fa0_d82c_406a_bda7_597d6e190654 ;
+    skos:prefLabel "temperature_dimension0"@en ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "ntimes"^^xsd:string ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of points describing the heat treatment profile."@en .
+
+<http://onto-ns.com/meta/calm/0.1/HeatTreatment#time> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://onto-ns.com/meta/calm/0.1/HeatTreatment#time_dimension0> ;
+            owl:onProperty emmo:EMMO_9ae258e3_f79b_4ff3_a777_9c188b3c019c ],
+        [ a owl:Restriction ;
+            owl:onClass emmo:Second ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_e5a34647_a955_40bc_8d81_9b784f0ac527 ;
+            owl:someValuesFrom emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ],
+        emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a ;
+    skos:prefLabel "Time"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Array of times in the heat treatment profile. Must be increasing."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://onto-ns.com/meta/calm/0.1/HeatTreatment#time_dimension0> a emmo:EMMO_b4c97fa0_d82c_406a_bda7_597d6e190654 ;
+    skos:prefLabel "time_dimension0"@en ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "ntimes"^^xsd:string ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of points describing the heat treatment profile."@en .
+
+<http://onto-ns.com/meta/calm/0.1/YieldStress> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass <http://onto-ns.com/meta/calm/0.1/YieldStress#yield_stress> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    skos:prefLabel "YieldStress"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A datamodel for the Yield stress."@en ;
+    oteio:hasURI "http://onto-ns.com/meta/calm/0.1/YieldStress"^^xsd:anyURI .
+
+<http://onto-ns.com/meta/calm/0.1/YieldStress#yield_stress> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass emmo:MegaPascal ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "Yield_stress"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Yield stress."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/AbaqusConfiguration> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/AbaqusConfiguration#inputfile> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/AbaqusConfiguration#postprocessingfile> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    skos:prefLabel "AbaqusConfiguration"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The files required to run Abaqus, including local postprocessing."@en ;
+    oteio:hasURI "http://www.sintef.no/calm/0.1/AbaqusConfiguration"^^xsd:anyURI .
+
+<http://www.sintef.no/calm/0.1/AbaqusConfiguration#inputfile> a owl:Class ;
+    rdfs:subClassOf emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_5f334606_f67d_4f0e_acb9_eeb21cb10c66 ;
+    skos:prefLabel "Inputfile"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Base64 encoded content of the input file (CementModel_Final_contact.inp)."@en .
+
+<http://www.sintef.no/calm/0.1/AbaqusConfiguration#postprocessingfile> a owl:Class ;
+    rdfs:subClassOf emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_5f334606_f67d_4f0e_acb9_eeb21cb10c66 ;
+    skos:prefLabel "Postprocessingfile"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Base64 encoded content of the postprocessing file (OpenODB7.py)."@en .
+
+<http://www.sintef.no/calm/0.1/AluminiumMaterialCard> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/AluminiumMaterialCard#E_elastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Nu_elastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Strain_plastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Stress_plastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Yield_stress> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/AluminiumMaterialCard#density> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/AluminiumMaterialCard#materialName> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    skos:prefLabel "AluminiumMaterialCard"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Material card for Aluminium as input to the Abaqus Material card"@en ;
+    oteio:hasURI "http://www.sintef.no/calm/0.1/AluminiumMaterialCard"^^xsd:anyURI .
+
+<http://www.sintef.no/calm/0.1/AluminiumMaterialCard#E_elastic> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass emmo:Pascal ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "E_elastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Young's modulus of the material (Pa)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Nu_elastic> a owl:Class ;
+    rdfs:subClassOf emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "Nu_elastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Poisson ratio of the material (-)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Strain_plastic> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Strain_plastic_dimension0> ;
+            owl:onProperty emmo:EMMO_9ae258e3_f79b_4ff3_a777_9c188b3c019c ],
+        [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_e5a34647_a955_40bc_8d81_9b784f0ac527 ;
+            owl:someValuesFrom emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ],
+        emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a ;
+    skos:prefLabel "Strain_plastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Plastic strain deformation (-)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Strain_plastic_dimension0> a emmo:EMMO_b4c97fa0_d82c_406a_bda7_597d6e190654 ;
+    skos:prefLabel "Strain_plastic_dimension0"@en ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "nplastic"^^xsd:string ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of points for describing the plastic behaviour."@en .
+
+<http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Stress_plastic> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Stress_plastic_dimension0> ;
+            owl:onProperty emmo:EMMO_9ae258e3_f79b_4ff3_a777_9c188b3c019c ],
+        [ a owl:Restriction ;
+            owl:onClass emmo:Pascal ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_e5a34647_a955_40bc_8d81_9b784f0ac527 ;
+            owl:someValuesFrom emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ],
+        emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a ;
+    skos:prefLabel "Stress_plastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Plastic stress (Pa)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Stress_plastic_dimension0> a emmo:EMMO_b4c97fa0_d82c_406a_bda7_597d6e190654 ;
+    skos:prefLabel "Stress_plastic_dimension0"@en ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "nplastic"^^xsd:string ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of points for describing the plastic behaviour."@en .
+
+<http://www.sintef.no/calm/0.1/AluminiumMaterialCard#Yield_stress> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass emmo:Pascal ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "Yield_stress"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Yield stress (Pa)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/AluminiumMaterialCard#density> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass emmo:KilogramPerCubicMetre ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "Density"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Material density of the material (kg/m3)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/AluminiumMaterialCard#materialName> a owl:Class ;
+    rdfs:subClassOf emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_5f334606_f67d_4f0e_acb9_eeb21cb10c66 ;
+    skos:prefLabel "MaterialName"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Name of the material."@en .
+
+<http://www.sintef.no/calm/0.1/ConcreteMaterialCard> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/ConcreteMaterialCard#E_elastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Nu_elastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Strain_plastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Stress_plastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Yield_stress> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/ConcreteMaterialCard#density> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/ConcreteMaterialCard#materialName> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    skos:prefLabel "ConcreteMaterialCard"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Material card for Concrete material as input to the Abaqus Material card"@en ;
+    oteio:hasURI "http://www.sintef.no/calm/0.1/ConcreteMaterialCard"^^xsd:anyURI .
+
+<http://www.sintef.no/calm/0.1/ConcreteMaterialCard#E_elastic> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass emmo:Pascal ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "E_elastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Young's modulus of the material (Pa)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Nu_elastic> a owl:Class ;
+    rdfs:subClassOf emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "Nu_elastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Poisson ratio of the material (-)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Strain_plastic> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Strain_plastic_dimension0> ;
+            owl:onProperty emmo:EMMO_9ae258e3_f79b_4ff3_a777_9c188b3c019c ],
+        [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_e5a34647_a955_40bc_8d81_9b784f0ac527 ;
+            owl:someValuesFrom emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ],
+        emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a ;
+    skos:prefLabel "Strain_plastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Plastic strain deformation (-)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Strain_plastic_dimension0> a emmo:EMMO_b4c97fa0_d82c_406a_bda7_597d6e190654 ;
+    skos:prefLabel "Strain_plastic_dimension0"@en ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "nplastic"^^xsd:string ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of points for describing the plastic behaviour."@en .
+
+<http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Stress_plastic> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Stress_plastic_dimension0> ;
+            owl:onProperty emmo:EMMO_9ae258e3_f79b_4ff3_a777_9c188b3c019c ],
+        [ a owl:Restriction ;
+            owl:onClass emmo:Pascal ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_e5a34647_a955_40bc_8d81_9b784f0ac527 ;
+            owl:someValuesFrom emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ],
+        emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a ;
+    skos:prefLabel "Stress_plastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Plastic stress (Pa)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Stress_plastic_dimension0> a emmo:EMMO_b4c97fa0_d82c_406a_bda7_597d6e190654 ;
+    skos:prefLabel "Stress_plastic_dimension0"@en ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "nplastic"^^xsd:string ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of points for describing the plastic behaviour."@en .
+
+<http://www.sintef.no/calm/0.1/ConcreteMaterialCard#Yield_stress> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass emmo:Pascal ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "Yield_stress"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Yield stress (Pa)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/ConcreteMaterialCard#density> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass emmo:KilogramPerCubicMetre ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "Density"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Material density of the material (kg/m3)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/ConcreteMaterialCard#materialName> a owl:Class ;
+    rdfs:subClassOf emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_5f334606_f67d_4f0e_acb9_eeb21cb10c66 ;
+    skos:prefLabel "MaterialName"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Name of the material."@en .
+
+<http://www.sintef.no/calm/0.1/TabulatedElastoPlastic> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#E_elastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#Nu_elastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#Strain_plastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#Stress_plastic> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#density> ;
+            owl:onProperty emmo:EMMO_b19aacfc_5f73_4c33_9456_469c1e89a53e ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a ;
+    skos:prefLabel "TabulatedElastoPlastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Material properties for an elasto plastic material represented by a table"@en ;
+    oteio:hasURI "http://www.sintef.no/calm/0.1/TabulatedElastoPlastic"^^xsd:anyURI .
+
+<http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#E_elastic> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass emmo:Pascal ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "E_elastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Young's modulus of the material (Pa)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#Nu_elastic> a owl:Class ;
+    rdfs:subClassOf emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "Nu_elastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Poisson ratio of the material (-)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#Strain_plastic> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#Strain_plastic_dimension0> ;
+            owl:onProperty emmo:EMMO_9ae258e3_f79b_4ff3_a777_9c188b3c019c ],
+        [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_e5a34647_a955_40bc_8d81_9b784f0ac527 ;
+            owl:someValuesFrom emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ],
+        emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a ;
+    skos:prefLabel "Strain_plastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Plastic strain deformation (-)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#Strain_plastic_dimension0> a emmo:EMMO_b4c97fa0_d82c_406a_bda7_597d6e190654 ;
+    skos:prefLabel "Strain_plastic_dimension0"@en ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "nplastic"^^xsd:string ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of points for describing the plastic behaviour."@en .
+
+<http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#Stress_plastic> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#Stress_plastic_dimension0> ;
+            owl:onProperty emmo:EMMO_9ae258e3_f79b_4ff3_a777_9c188b3c019c ],
+        [ a owl:Restriction ;
+            owl:onClass emmo:Pascal ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_e5a34647_a955_40bc_8d81_9b784f0ac527 ;
+            owl:someValuesFrom emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ],
+        emmo:EMMO_28fbea28_2204_4613_87ff_6d877b855fcd,
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a ;
+    skos:prefLabel "Stress_plastic"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Plastic stress (Pa)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+<http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#Stress_plastic_dimension0> a emmo:EMMO_b4c97fa0_d82c_406a_bda7_597d6e190654 ;
+    skos:prefLabel "Stress_plastic_dimension0"@en ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "nplastic"^^xsd:string ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Number of points for describing the plastic behaviour."@en .
+
+<http://www.sintef.no/calm/0.1/TabulatedElastoPlastic#density> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass emmo:KilogramPerCubicMetre ;
+            owl:onProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        emmo:EMMO_50d6236a_7667_4883_8ae1_9bb5d190423a,
+        emmo:EMMO_52fa9c76_fc42_4eca_a5c1_6095a1c9caab ;
+    skos:prefLabel "Density"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Material density of the material (kg/m3)."@en ;
+    oteio:datasize "8"^^xsd:nonNegativeInteger .
+
+ss3kb:abaqus_config1_dataresource1 a dcat:Distribution,
+        oteio:Filter ;
+    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/abaqus_conf.zip"^^xsd:anyURI ;
+    dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
+    oteio:filterType "dataresource" ;
+    oteio:hasConfiguration "{\"datamodel\": \"http://www.sintef.no/calm/0.1/AbaqusConfiguration\", \"driver\": \"abaqus_configuration\", \"options\": \"inputfile=CementModel_Final_contact.inp;ppfile=OpenODB7.py\"}"^^rdf:JSON .
+
+ss3kb:abaqus_materialcard_al1_dataresource1 a dcat:Distribution,
+        oteio:Filter ;
+    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/material_card_al.json"^^xsd:anyURI ;
+    dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
+    oteio:filterType "dataresource" ;
+    oteio:hasConfiguration "{\"datamodel\": \"http://www.sintef.no/calm/0.1/AluminiumMaterialCard\", \"driver\": \"json\"}"^^rdf:JSON .
+
+ss3kb:abaqus_materialcard_concrete1_dataresource1 a dcat:Distribution,
+        oteio:Filter ;
+    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/material_card_concrete.json"^^xsd:anyURI ;
+    dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
+    oteio:filterType "dataresource" ;
+    oteio:hasConfiguration "{\"datamodel\": \"http://www.sintef.no/calm/0.1/ConcreteMaterialCard\", \"driver\": \"json\"}"^^rdf:JSON .
+
+ss3kb:alloy_composition1_dataresource1 a dcat:Distribution,
+        oteio:Filter ;
+    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/alloy_composition.csv"^^xsd:anyURI ;
+    dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
+    oteio:filterType "dataresource" ;
+    oteio:hasConfiguration "{\"datamodel\": \"http://onto-ns.com/meta/calm/0.1/AlloyComposition\", \"driver\": \"alloy_composition\", \"options\": \"dialect=excel\"}"^^rdf:JSON .
+
+ss3kb:alloy_heat_treatment1_dataresource1 a dcat:Distribution,
+        oteio:Filter ;
+    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/heat_treatment.csv"^^xsd:anyURI ;
+    dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
+    oteio:filterType "dataresource" ;
+    oteio:hasConfiguration "{\"datamodel\": \"http://onto-ns.com/meta/calm/0.1/HeatTreatment\", \"driver\": \"heat_treatment\", \"options\": \"dialect=excel\"}"^^rdf:JSON .
+
+ss3kb:tabulated_elastoplastic1_dataresource1 a dcat:Distribution,
+        oteio:Filter ;
+    dcat:downloadUrl "https://raw.githubusercontent.com/H2020-OpenModel/Public/main/data/SS3/tabulated_elasto_plastic.json"^^xsd:anyURI ;
+    dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
+    oteio:filterType "dataresource" ;
+    oteio:hasConfiguration "{\"datamodel\": \"http://www.sintef.no/calm/0.1/TabulatedElastoPlastic\", \"driver\": \"json\"}"^^rdf:JSON .
+
+ss3kb:yieldstrength1_dataresource1 a dcat:Distribution,
+        oteio:Filter ;
+    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/yieldstress-output.txt"^^xsd:anyURI ;
+    dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
+    oteio:filterType "dataresource" ;
+    oteio:hasConfiguration "{\"datamodel\": \"http://onto-ns.com/meta/calm/0.1/YieldStress\", \"driver\": \"yieldstress\"}"^^rdf:JSON .
+
