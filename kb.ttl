@@ -607,50 +607,49 @@ ss3kb:yieldstrength1 a <http://onto-ns.com/meta/calm/0.1/YieldStress>,
 
 ss3kb:abaqus_config1_dataresource1 a dcat:Distribution,
         oteio:Filter ;
-    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/abaqus_conf.zip"^^xsd:anyURI ;
+    dcat:downloadURL "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/abaqus_conf.zip"^^xsd:anyURI ;
     dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
     oteio:filterType "dataresource" ;
     oteio:hasConfiguration "{\"datamodel\": \"http://www.sintef.no/calm/0.1/AbaqusConfiguration\", \"driver\": \"abaqus_configuration\", \"options\": \"inputfile=CementModel_Final_contact.inp;ppfile=OpenODB7.py\"}"^^rdf:JSON .
 
 ss3kb:abaqus_materialcard_al1_dataresource1 a dcat:Distribution,
         oteio:Filter ;
-    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/material_card_al.json"^^xsd:anyURI ;
+    dcat:downloadURL "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/material_card_al.json"^^xsd:anyURI ;
     dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
     oteio:filterType "dataresource" ;
     oteio:hasConfiguration "{\"datamodel\": \"http://www.sintef.no/calm/0.1/AluminiumMaterialCard\", \"driver\": \"json\"}"^^rdf:JSON .
 
 ss3kb:abaqus_materialcard_concrete1_dataresource1 a dcat:Distribution,
         oteio:Filter ;
-    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/material_card_concrete.json"^^xsd:anyURI ;
+    dcat:downloadURL "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/material_card_concrete.json"^^xsd:anyURI ;
     dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
     oteio:filterType "dataresource" ;
     oteio:hasConfiguration "{\"datamodel\": \"http://www.sintef.no/calm/0.1/ConcreteMaterialCard\", \"driver\": \"json\"}"^^rdf:JSON .
 
 ss3kb:alloy_composition1_dataresource1 a dcat:Distribution,
         oteio:Filter ;
-    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/alloy_composition.csv"^^xsd:anyURI ;
+    dcat:downloadURL "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/alloy_composition.csv"^^xsd:anyURI ;
     dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
     oteio:filterType "dataresource" ;
     oteio:hasConfiguration "{\"datamodel\": \"http://onto-ns.com/meta/calm/0.1/AlloyComposition\", \"driver\": \"alloy_composition\", \"options\": \"dialect=excel\"}"^^rdf:JSON .
 
 ss3kb:alloy_heat_treatment1_dataresource1 a dcat:Distribution,
         oteio:Filter ;
-    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/heat_treatment.csv"^^xsd:anyURI ;
+    dcat:downloadURL "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/heat_treatment.csv"^^xsd:anyURI ;
     dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
     oteio:filterType "dataresource" ;
     oteio:hasConfiguration "{\"datamodel\": \"http://onto-ns.com/meta/calm/0.1/HeatTreatment\", \"driver\": \"heat_treatment\", \"options\": \"dialect=excel\"}"^^rdf:JSON .
 
 ss3kb:tabulated_elastoplastic1_dataresource1 a dcat:Distribution,
         oteio:Filter ;
-    dcat:downloadUrl "https://raw.githubusercontent.com/H2020-OpenModel/Public/main/data/SS3/tabulated_elasto_plastic.json"^^xsd:anyURI ;
+    dcat:downloadURL "https://raw.githubusercontent.com/H2020-OpenModel/Public/main/data/SS3/tabulated_elasto_plastic.json"^^xsd:anyURI ;
     dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
     oteio:filterType "dataresource" ;
     oteio:hasConfiguration "{\"datamodel\": \"http://www.sintef.no/calm/0.1/TabulatedElastoPlastic\", \"driver\": \"json\"}"^^rdf:JSON .
 
 ss3kb:yieldstrength1_dataresource1 a dcat:Distribution,
         oteio:Filter ;
-    dcat:downloadUrl "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/yieldstress-output.txt"^^xsd:anyURI ;
+    dcat:downloadURL "https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/yieldstress-output.txt"^^xsd:anyURI ;
     dcat:mediaType "application/vnd.dlite-parse"^^xsd:string ;
     oteio:filterType "dataresource" ;
     oteio:hasConfiguration "{\"datamodel\": \"http://onto-ns.com/meta/calm/0.1/YieldStress\", \"driver\": \"yieldstress\"}"^^rdf:JSON .
-

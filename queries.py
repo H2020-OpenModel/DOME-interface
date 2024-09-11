@@ -38,22 +38,18 @@ for r, in result1:
 query2 = f"""
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX ss3:  <http://open-model.eu/ontologies/ss3#>
-PREFIX dm:   <http://onto-ns.com/meta/calm/0.1/>
 
 SELECT ?dataset
 WHERE {{
-  ?dataset rdf:type dm:AlloyComposition .
+  ?dataset rdf:type <http://onto-ns.com/meta/calm/0.1/AlloyComposition> .
 }}
 """
 result2 = ts.query(query2)
 print()
-print("AlloyComposition dataset")
-print(result2)
+print("AlloyComposition dataset:")
+for r, in result2:
+    print("  - ", r)
 
-
-#  ?dataset dcat:distribution ?dist .
-#  ?dist dcat:downloadURL ?url .
 
 
 
@@ -61,13 +57,22 @@ print(result2)
 query3 = f"""
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX ss3:  <http://open-model.eu/ontologies/ss3#>
 PREFIX dm:   <http://onto-ns.com/meta/calm/0.1/>
 
-SELECT ?dataset
+SELECT ?dataset ?url ?mediaType
 WHERE {{
   ?dataset rdf:type dm:AlloyComposition .
-  ?dataset rdf:type ?dm .
-  ?dm skos:prefLabel "AlloyComposition"@en .
+  ?dataset dcat:distribution ?dist .
+  ?dist dcat:downloadURL ?url .
+  ?dist dcat:mediaType ?mediaType .
 }}
 """
+result3 = ts.query(query3)
+print()
+print("How to access the AlloyComposition dataset:")
+dataset, url, mediaType = result3[0]
+print("  - dataset:", dataset)
+print("  - downloadURL:", url)
+print("  - mediaType:", mediaType)
