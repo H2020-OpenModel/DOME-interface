@@ -18,7 +18,7 @@ ts.parse(thisdir / "kb.ttl")
 
 
 # Find all emmo:DataSet individuals
-# Note how Tripper allow us
+# Note how Tripper allow us write readable SPARQL queries with EMMO prefLabel's.
 query1 = f"""
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -51,9 +51,7 @@ for r, in result2:
     print("  - ", r)
 
 
-
-
-
+# How to access the AlloyComposition dataset
 query3 = f"""
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -76,3 +74,4 @@ dataset, url, mediaType = result3[0]
 print("  - dataset:", dataset)
 print("  - downloadURL:", url)
 print("  - mediaType:", mediaType)
+print("  - datamodel:", mediaType)
