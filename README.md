@@ -8,11 +8,16 @@ Create a virtual Python environment (for more info, see [venv documentation](htt
 
 In short, create the environment with
 
-    python -m venv </path/to/new/virtual/environment>
+    python -m venv .venv
 
-and activate it
+where `.venv` is the directory where you want to store your virtual environment.
+Activate the environment with one of the following commands, depending on your shell:
 
+    # bash
     source </path/to/new/virtual/environment>/bin/activate
+
+    # Windows cmd.exe
+    .venv\Scripts\activate.bat
 
 Install requirements
 
