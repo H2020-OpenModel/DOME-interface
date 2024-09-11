@@ -73,5 +73,4 @@ print("How to access the AlloyComposition dataset:")
 dataset, url, mediaType = result3[0]
 print("  - dataset:", dataset)
 print("  - downloadURL:", url)
-print("  - mediaType:", mediaType)
-print("  - datamodel:", mediaType)
+#print("  - mediaType:", mediaType)

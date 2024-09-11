@@ -54,5 +54,4 @@ Running the script, you should get the following output:
 >
 > How to access the AlloyComposition dataset:
 >   - dataset: http://open-model.eu/ontologies/ss3kb#alloy_composition1
->   - url: https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/alloy_composition.csv
->   - mediaType: application/vnd.dlite-parse
+>   - downloadURL: https://github.com/H2020-OpenModel/SS3_wrappers/raw/main/tests/testfiles/input_data/alloy_composition.csv
