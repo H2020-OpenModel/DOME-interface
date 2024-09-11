@@ -1,5 +1,6 @@
 DOME 4.0 interface to OpenModel
 ===============================
+Demonstrate how DOME 4.0 can access the OpenModel knowledge base.
 
 
 Installation
@@ -27,11 +28,16 @@ Install requirements
 
 
 
-Test querying the data
-----------------------
+Test querying the knowledge base
+--------------------------------
 In the repo contains a knowledge base serialised to the turtle file
 `kb.ttl`, which describes some datasets used in the OpenModel success
 story 3 on aluminium-reinforced concrete.
+
+Since the knowledge base is accessed via Tripper, the example below
+can be run almost completely unmodified (only change the Tripper
+backend) with a knowledge base hosted on any other other
+SPARQL-enabled triplestore solution that we have a backend for.
 
 The script `queries.py` is a Python script that access the knowledge
 base and perform some SPARQL queries.  Run it with:
